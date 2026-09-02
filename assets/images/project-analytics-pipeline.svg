@@ -1,0 +1,24 @@
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="pgBg" x1="0" y1="0" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="hsl(240,2%,15%)"/>
+<stop offset="1" stop-color="hsl(240,1%,10%)"/>
+</linearGradient>
+<linearGradient id="pgGold" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0.26" stop-color="#FFDB6E"/>
+<stop offset="1" stop-color="#FFBC5E"/>
+</linearGradient>
+</defs>
+<rect width="400" height="260" fill="url(#pgBg)"/>
+<rect x="40" y="66" width="90" height="34" rx="6" fill="none" stroke="#7a6a4a" stroke-width="1.6"/>
+<text x="85" y="87" font-family="Poppins, Arial, sans-serif" font-size="13" fill="#c9bfa8" text-anchor="middle">Bronze</text>
+<rect x="155" y="113" width="90" height="34" rx="6" fill="none" stroke="#b89b5e" stroke-width="1.8"/>
+<text x="200" y="134" font-family="Poppins, Arial, sans-serif" font-size="13" fill="#e7d7ab" text-anchor="middle">Silver</text>
+<rect x="270" y="160" width="90" height="34" rx="6" fill="none" stroke="url(#pgGold)" stroke-width="2.2"/>
+<text x="315" y="181" font-family="Poppins, Arial, sans-serif" font-size="13" fill="#FFDB6E" text-anchor="middle">Gold</text>
+<path d="M130 83H150C152 83 152 130 155 130" stroke="#8a7a55" stroke-width="1.6" fill="none"/>
+<path d="M245 130H265C267 130 267 177 270 177" stroke="url(#pgGold)" stroke-width="1.8" fill="none"/>
+<circle cx="315" cy="200" r="3" fill="#FFDB6E"/>
+<circle cx="330" cy="200" r="3" fill="#FFDB6E"/>
+<circle cx="345" cy="200" r="3" fill="#FFDB6E"/>
+</svg>

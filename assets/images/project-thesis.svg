@@ -1,0 +1,18 @@
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="tgBg" x1="0" y1="0" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="hsl(240,2%,15%)"/>
+<stop offset="1" stop-color="hsl(240,1%,10%)"/>
+</linearGradient>
+<linearGradient id="tgGold" x1="100" y1="50" x2="300" y2="220" gradientUnits="userSpaceOnUse">
+<stop offset="0.26" stop-color="#FFDB6E"/>
+<stop offset="1" stop-color="#FFBC5E"/>
+</linearGradient>
+</defs>
+<rect width="400" height="260" fill="url(#tgBg)"/>
+<path d="M90 55H310L245 130H155L90 55Z" fill="none" stroke="url(#tgGold)" stroke-width="2"/>
+<path d="M155 130H245L215 190H185L155 130Z" fill="none" stroke="url(#tgGold)" stroke-width="2" opacity="0.75"/>
+<path d="M185 190H215L204 218H196L185 190Z" fill="url(#tgGold)" opacity="0.9"/>
+<text x="200" y="45" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#c9bfa8" text-anchor="middle" letter-spacing="1">AWARENESS</text>
+<text x="200" y="245" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#FFDB6E" text-anchor="middle" letter-spacing="1">CONVERSION</text>
+</svg>

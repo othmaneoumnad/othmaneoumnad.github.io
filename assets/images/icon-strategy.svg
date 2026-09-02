@@ -1,0 +1,11 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ga4" x1="4" y1="4" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+<stop offset="0.26" stop-color="#FFDB6E"/>
+<stop offset="1" stop-color="#FFBC5E"/>
+</linearGradient>
+</defs>
+<path d="M6 36V26M6 26H15V19H24V12H33V4" stroke="url(#ga4)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 26V19" stroke="url(#ga4)" stroke-width="2.1" stroke-linecap="round" opacity="0"/>
+<path d="M33 4H26L29.5 8L26 12H33V4Z" stroke="url(#ga4)" stroke-width="2" stroke-linejoin="round"/>
+</svg>

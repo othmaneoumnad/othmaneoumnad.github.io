@@ -1,0 +1,22 @@
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ieBg" x1="0" y1="0" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="hsl(240,2%,15%)"/>
+<stop offset="1" stop-color="hsl(240,1%,10%)"/>
+</linearGradient>
+<linearGradient id="ieGold" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0.26" stop-color="#FFDB6E"/>
+<stop offset="1" stop-color="#FFBC5E"/>
+</linearGradient>
+</defs>
+<rect width="400" height="260" fill="url(#ieBg)"/>
+<line x1="55" y1="150" x2="345" y2="150" stroke="#5c5142" stroke-width="2"/>
+<circle cx="90" cy="150" r="6" fill="none" stroke="#8a7a55" stroke-width="1.8"/>
+<circle cx="175" cy="150" r="6" fill="none" stroke="#b89b5e" stroke-width="1.8"/>
+<circle cx="260" cy="150" r="6" fill="none" stroke="url(#ieGold)" stroke-width="2"/>
+<circle cx="330" cy="150" r="7" fill="url(#ieGold)"/>
+<text x="90" y="175" font-family="Poppins, Arial, sans-serif" font-size="11" fill="#a89a7c" text-anchor="middle">2006</text>
+<text x="330" y="175" font-family="Poppins, Arial, sans-serif" font-size="11" fill="#FFDB6E" text-anchor="middle">2025</text>
+<rect x="145" y="65" width="110" height="60" rx="4" fill="none" stroke="url(#ieGold)" stroke-width="1.8"/>
+<path d="M160 82H240M160 96H225M160 110H210" stroke="#e7d7ab" stroke-width="2" stroke-linecap="round"/>
+</svg>

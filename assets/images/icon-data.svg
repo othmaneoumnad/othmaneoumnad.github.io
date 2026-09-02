@@ -1,0 +1,11 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ga3" x1="4" y1="4" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+<stop offset="0.26" stop-color="#FFDB6E"/>
+<stop offset="1" stop-color="#FFBC5E"/>
+</linearGradient>
+</defs>
+<ellipse cx="21" cy="9" rx="12" ry="4.5" stroke="url(#ga3)" stroke-width="2.1"/>
+<path d="M9 9V21C9 23.4853 14.373 25.5 21 25.5C27.627 25.5 33 23.4853 33 21V9" stroke="url(#ga3)" stroke-width="2.1" stroke-linecap="round"/>
+<path d="M9 21V33C9 35.4853 14.373 37.5 21 37.5C27.627 37.5 33 35.4853 33 33V21" stroke="url(#ga3)" stroke-width="2.1" stroke-linecap="round"/>
+</svg>
