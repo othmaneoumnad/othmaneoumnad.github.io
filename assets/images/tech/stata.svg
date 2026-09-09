@@ -1,0 +1,9 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Stata</title>
+<rect fill="#FFDB6E" x="1" y="15" width="4" height="7" rx="0.6"/>
+<rect fill="#FFDB6E" x="10" y="10" width="4" height="12" rx="0.6"/>
+<rect fill="#FFDB6E" x="19" y="5" width="4" height="17" rx="0.6"/>
+<path fill="none" stroke="#FFDB6E" stroke-width="1.6" stroke-linecap="round" d="M3 11 L12 6 L21 1"/>
+<circle fill="#FFDB6E" cx="3" cy="11" r="1.6"/>
+<circle fill="#FFDB6E" cx="12" cy="6" r="1.6"/>
+<circle fill="#FFDB6E" cx="21" cy="1" r="1.6"/>
+</svg>

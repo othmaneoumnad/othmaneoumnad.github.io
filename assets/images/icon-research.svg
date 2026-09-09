@@ -5,8 +5,8 @@
 <stop offset="1" stop-color="#FFBC5E"/>
 </linearGradient>
 </defs>
-<path d="M9 6H26L32 12V36C32 37.1 31.1 38 30 38H9C7.9 38 7 37.1 7 36V8C7 6.9 7.9 6 9 6Z" stroke="url(#ga2)" stroke-width="2" stroke-linejoin="round"/>
-<path d="M12.5 17H26.5M12.5 22.5H21" stroke="url(#ga2)" stroke-width="2" stroke-linecap="round"/>
-<circle cx="24" cy="29" r="6.5" stroke="url(#ga2)" stroke-width="2.1"/>
-<path d="M28.6 33.6L33 38" stroke="url(#ga2)" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M9 6H26L32 12V36C32 37.1 31.1 38 30 38H9C7.9 38 7 37.1 7 36V8C7 6.9 7.9 6 9 6Z" stroke="url(#ga2)" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M12.5 17H26.5M12.5 22.5H21" stroke="url(#ga2)" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="24" cy="29" r="6.5" stroke="url(#ga2)" stroke-width="2.2"/>
+<path d="M28.6 33.6L33 38" stroke="url(#ga2)" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

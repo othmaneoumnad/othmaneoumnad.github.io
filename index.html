@@ -74,7 +74,13 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:othmane.oumnad@gmail.com" class="contact-link">othmane.oumnad@gmail.com</a>
+              <div class="contact-value">
+                <a href="mailto:othmane.oumnad@gmail.com" class="contact-link" title="othmane.oumnad@gmail.com">othmane.oumnad@gmail.com</a>
+
+                <button type="button" class="copy-btn" data-copy-value="othmane.oumnad@gmail.com" aria-label="Copy email address">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </div>
             </div>
 
           </li>
@@ -88,26 +94,44 @@
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+19294290234" class="contact-link">+1 (929) 429-0234</a>
+              <div class="contact-value">
+                <a href="#" class="contact-link" data-phone-link data-phone-encoded="MTkyOTQyOTAyMzQ=" aria-label="Call phone number"></a>
+
+                <button type="button" class="copy-btn" data-copy-phone aria-label="Copy phone number">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </div>
             </div>
 
           </li>
 
-        </ul>
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://github.com/othmaneoumnad" target="_blank" rel="noopener">
 
-        <div class="separator"></div>
+              <div class="icon-box">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
 
-        <ul class="social-list">
+              <div class="contact-info">
+                <p class="contact-title">GitHub</p>
+                <p class="contact-link">github.com/othmaneoumnad</p>
+              </div>
 
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/othmaneoumnad" target="_blank" rel="noopener" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
-          <li class="social-item">
-            <a href="https://github.com/othmaneoumnad" target="_blank" rel="noopener" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://www.linkedin.com/in/othmaneoumnad" target="_blank" rel="noopener">
+
+              <div class="icon-box">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">LinkedIn</p>
+                <p class="contact-link">linkedin.com/in/othmaneoumnad</p>
+              </div>
+
             </a>
           </li>
 
@@ -171,16 +195,26 @@
 
         <section class="about-text">
           <p>
-            I'm a recent economics graduate (Entrepreneurship Pathway) with a habit of poking at problems until they
-            make sense. I'm drawn to the space where consumer behavior, advertising, and firm strategy meet — which
-            is why I gravitate toward business analysis, consulting, and product management.
+            I solve ambiguous business challenges by bridging microeconomic theory, consumer behavior, and hands-on
+            data analysis. Rather than confining myself to a single functional silo, I operate as a versatile problem
+            solver, equally comfortable analyzing firm incentives, structuring data layers, or dissecting growth
+            metrics.
           </p>
 
           <p>
-            I like turning messy data and open-ended questions into a clear business story: whether that's building
-            a data pipeline that defines what "activation" actually means for a product, running panel regressions
-            on advertising budgets across 18 public companies, or evaluating twenty years of a program's real-world
-            impact. Currently looking for full-time roles where I can do more of that.
+            My approach is grounded in economic decision frameworks and consumer psychology. I treat technical tools
+            as a practical means to answer strategic questions and test hypotheses. Whether running statistical
+            regressions in Stata, modeling Medallion data layers in SQL and VS Code, building Power BI dashboards, or
+            evaluating user acquisition through Google Analytics, I deploy whatever tools are necessary to uncover
+            root causes and resolve operational bottlenecks.
+          </p>
+
+          <p>
+            Fluent in five languages and currently learning a sixth, I bring a global perspective that helps me
+            identify subtleties in consumer intent and cross-functional communication that others might overlook.
+            This appreciation for nuance extends to my personal interests in classical music, culinary
+            experimentation, and interior design, which reinforce my commitment to polish, structure, and high-craft
+            execution in every project I deliver.
           </p>
         </section>
 
@@ -205,7 +239,8 @@
                 <h4 class="h4 service-item-title">Marketing & Growth Analytics</h4>
 
                 <p class="service-item-text">
-                  Search ads, KPI dashboards, and growth experiments — turning campaign data into decisions.
+                  Optimizing search campaigns, user acquisition tracking, and growth experiments to turn performance
+                  metrics into actionable strategy.
                 </p>
               </div>
 
@@ -221,7 +256,8 @@
                 <h4 class="h4 service-item-title">Market & Financial Research</h4>
 
                 <p class="service-item-text">
-                  Market sizing, valuation, and financial modeling to evaluate opportunities and risk.
+                  Executing market sizing, financial modeling, and valuation to assess strategic opportunities and
+                  mitigate risk.
                 </p>
               </div>
 
@@ -237,7 +273,8 @@
                 <h4 class="h4 service-item-title">Data & Business Intelligence</h4>
 
                 <p class="service-item-text">
-                  Building clean data pipelines and dashboards (SQL, Python, Power BI) that answer real business questions.
+                  Building Medallion data architectures and interactive dashboards (SQL, Python, Power BI) that
+                  transform raw data into clear business answers.
                 </p>
               </div>
 
@@ -253,10 +290,138 @@
                 <h4 class="h4 service-item-title">Strategy & Economic Analysis</h4>
 
                 <p class="service-item-text">
-                  Applying economic reasoning and regression analysis to firm strategy and market behavior.
+                  Applying microeconomic modeling, game theory, and regression analysis in Stata to evaluate firm
+                  incentives and consumer behavior.
                 </p>
               </div>
 
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - tech stack
+        -->
+
+        <section class="tech-stack">
+
+          <h3 class="h3 tech-stack-title">Tech Stack & Toolkit</h3>
+
+          <ul class="tech-stack-list">
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/googleads.svg" alt="Google Ads logo" width="28">
+              </div>
+              <p class="tech-stack-name">Google Ads</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/github.svg" alt="GitHub logo" width="28">
+              </div>
+              <p class="tech-stack-name">GitHub</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/stata.svg" alt="Stata logo" width="28">
+              </div>
+              <p class="tech-stack-name">Stata</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/visualstudiocode.svg" alt="VS Code logo" width="28">
+              </div>
+              <p class="tech-stack-name">VS Code</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/dbeaver.svg" alt="DBeaver logo" width="28">
+              </div>
+              <p class="tech-stack-name">DBeaver</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/powerbi.svg" alt="Power BI logo" width="28">
+              </div>
+              <p class="tech-stack-name">Power BI</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/python.svg" alt="Python logo" width="28">
+              </div>
+              <p class="tech-stack-name">Python</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/sql.svg" alt="SQL logo" width="28">
+              </div>
+              <p class="tech-stack-name">SQL</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/googleanalytics.svg" alt="Google Analytics logo" width="28">
+              </div>
+              <p class="tech-stack-name">Google Analytics</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/googletagmanager.svg" alt="Google Tag Manager logo" width="28">
+              </div>
+              <p class="tech-stack-name">Tag Manager</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/microsoftexcel.svg" alt="Excel logo" width="28">
+              </div>
+              <p class="tech-stack-name">Excel</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/microsoftpowerpoint.svg" alt="PowerPoint logo" width="28">
+              </div>
+              <p class="tech-stack-name">PowerPoint</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/canva.svg" alt="Canva logo" width="28">
+              </div>
+              <p class="tech-stack-name">Canva</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/claude.svg" alt="Claude logo" width="28">
+              </div>
+              <p class="tech-stack-name">Claude</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/rstudio.svg" alt="R Studio logo" width="28">
+              </div>
+              <p class="tech-stack-name">R Studio</p>
+            </li>
+
+            <li class="tech-stack-item">
+              <div class="tech-stack-icon-box">
+                <img src="./assets/images/tech/abletonlive.svg" alt="Ableton logo" width="28">
+              </div>
+              <p class="tech-stack-name">Ableton</p>
             </li>
 
           </ul>
@@ -299,11 +464,14 @@
               <span>2022 — 2026</span>
 
               <p class="timeline-text">
-                B.A. in Economics, Entrepreneurship Pathway. Coursework in microeconomics, econometrics, business
-                consulting, strategic management, and corporate finance. Selected to represent the Entrepreneurship
-                Pathway at the CIEE Global Entrepreneurship Competition (2023). Member of the Jenny Investment Club,
-                contributing research and stock pitches for a $12M mid-cap U.S. equity portfolio.
+                Bachelor of Arts in Economics, Entrepreneurship Pathway
               </p>
+
+              <ul class="timeline-text-list">
+                <li><strong>Relevant Coursework:</strong> Microeconomics, Econometrics, Business Consulting, Strategic Management, Corporate Finance.</li>
+                <li><strong>Achievements:</strong> Selected to represent the Entrepreneurship Pathway in the CIEE Global Entrepreneurship Competition, 2023.</li>
+                <li><strong>Activities:</strong> Jenny Investment Club - Contributed to research and stock pitches for a $12M mid cap U.S. equity portfolio.</li>
+              </ul>
 
             </li>
 
@@ -325,30 +493,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Growth Analyst Intern — The Underground, College of Wooster</h4>
-
-              <span>Aug 2024 — Sep 2025</span>
-
-              <p class="timeline-text">
-                Analyzed student engagement and participation patterns across digital and in-person channels to
-                identify effective event formats, outreach tactics, and audience segments. Translated findings into
-                recommendations that improved event planning, messaging, and outreach.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Marketing Analyst Intern — Kiwimbi International</h4>
 
               <span>Feb 2024 — Jul 2025</span>
 
-              <p class="timeline-text">
-                Built Kiwimbi's search advertising program, managing a $10,000/month grant while self-teaching Google
-                Ads. Increased website traffic by 46% and raised click-through rate from a 9.19% campaign average to
-                12.29%. Tracked 8+ key site actions in Google Analytics, creating KPI dashboards that informed
-                leadership decisions.
-              </p>
+              <ul class="timeline-text-list">
+                <li>Built Kiwimbi's search advertising program, managing a $10,000/month grant while self-teaching Google Ads.</li>
+                <li>Increased website traffic by 46% and raised click-through rate from a 9.19% campaign average to 12.29%.</li>
+                <li>Tracked 8+ key site actions using Google Analytics, creating detailed KPI dashboards that informed leadership decisions.</li>
+              </ul>
 
             </li>
 
@@ -358,15 +511,47 @@
 
               <span>Jun 2023 — Jul 2023</span>
 
-              <p class="timeline-text">
-                Introduced the club's first hourly-rate pricing model, turning customer demand patterns into a new
-                business strategy. Increased customer visits by 50% through targeted marketing and pricing, contributing
-                to an estimated 30% increase in sales during promotional periods.
-              </p>
+              <ul class="timeline-text-list">
+                <li>Introduced the club's first hourly rate pricing model, turning customer demand patterns into a new business strategy.</li>
+                <li>Increased customer visits by 50% through targeted marketing and pricing strategy, contributing to an estimated 30% increase in sales during promotional periods.</li>
+              </ul>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Growth Analyst Intern — The Underground, College of Wooster</h4>
+
+              <span>Aug 2024 — Sep 2025</span>
+
+              <ul class="timeline-text-list">
+                <li>Analyzed student engagement and participation patterns across digital and in-person channels to identify effective event formats, outreach tactics, and audience segments.</li>
+                <li>Translated findings into actionable recommendations that improved event planning, messaging, and student outreach.</li>
+              </ul>
 
             </li>
 
           </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Personal</h3>
+          </div>
+
+          <div class="timeline-list">
+            <ul class="timeline-text-list">
+              <li><strong>Languages:</strong> English (Fluent). French (Fluent). Arabic (Conversational). Darija (Native).</li>
+              <li><strong>Technical Skills:</strong> Excel (Pivot Tables, XLOOKUP). SQL. Power BI. Stata. Google Analytics 4. Google Tag Manager.</li>
+              <li><strong>Analytical Skills:</strong> Data Analysis. Regression Analysis. KPI Reporting. Market Research. A/B Testing. Business Strategy.</li>
+            </ul>
+          </div>
 
         </section>
 
@@ -540,10 +725,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-analytics-pipeline.svg" alt="product analytics pipeline" loading="lazy">
+                  <img src="./assets/images/project-product-analytics.png" alt="product analytics data lakehouse" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Product Analytics Pipeline</h3>
+                <h3 class="project-title">Product Analytics Data Lakehouse</h3>
 
                 <p class="project-category">Data & Analytics</p>
 
@@ -558,10 +743,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-thesis.svg" alt="independent study thesis" loading="lazy">
+                  <img src="./assets/images/project-thesis.png" alt="empirical independent study thesis" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">From Awareness to Conversion</h3>
+                <h3 class="project-title">Empirical Independent Study Thesis</h3>
 
                 <p class="project-category">Research</p>
 
@@ -576,10 +761,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-angel-investment.svg" alt="angel investment practicum" loading="lazy">
+                  <img src="./assets/images/project-angel-investment.jpg" alt="angel investing" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Angel Investment Practicum</h3>
+                <h3 class="project-title">Angel Investing</h3>
 
                 <p class="project-category">Strategy & Finance</p>
 
@@ -594,10 +779,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-impact-eval.svg" alt="social entrepreneurship program impact evaluation" loading="lazy">
+                  <img src="./assets/images/project-impact-eval.jpg" alt="impact analysis" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Wooster SEP Impact Evaluation</h3>
+                <h3 class="project-title">Impact Analysis</h3>
 
                 <p class="project-category">Research</p>
 
