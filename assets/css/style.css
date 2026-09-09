@@ -852,7 +852,49 @@ main {
 
 
 /**
- * education and experience 
+ * download button
+ */
+
+.download-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  white-space: nowrap;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: var(--transition-1);
+  margin-bottom: 30px;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.download-btn ion-icon { font-size: 16px; }
+
+.download-btn:hover,
+.download-btn:focus { background: var(--bg-gradient-yellow-1); }
+
+.download-btn:hover::before,
+.download-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+
+
+/**
+ * education and experience
  */
 
 .timeline { margin-bottom: 30px; }
