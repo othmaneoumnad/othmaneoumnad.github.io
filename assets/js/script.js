@@ -12,7 +12,9 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+// (guarded: standalone pages like project detail pages reuse this file but
+// don't necessarily have every element the homepage does)
+if (sidebarBtn) sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
 
@@ -22,7 +24,7 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+if (select) select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
@@ -163,4 +165,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+// deep-link support: a link like "index.html#portfolio" (used by standalone
+// pages, e.g. a project detail page's "Back to Portfolio" link) opens
+// straight to that section instead of always landing on "About"
+const initialHash = window.location.hash.replace("#", "").toLowerCase();
+
+if (initialHash) {
+  for (let i = 0; i < pages.length; i++) {
+    if (pages[i].dataset.page === initialHash) {
+      for (let j = 0; j < pages.length; j++) {
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
+      }
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+    }
+  }
 }
