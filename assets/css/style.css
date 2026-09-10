@@ -1186,6 +1186,8 @@ main {
 
 .project-section { margin-bottom: 35px; }
 
+.project-text { margin-bottom: 35px; }
+
 .project-section-title { margin-bottom: 15px; }
 
 /* "at a glance" summary card */
@@ -1219,7 +1221,7 @@ main {
 /* body copy (reuses the same treatment as About's paragraphs) */
 
 .project-text p,
-.project-section > p {
+.project-section p {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
