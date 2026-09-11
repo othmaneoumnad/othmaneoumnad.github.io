@@ -7,6 +7,26 @@ const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
 
+// theme toggle (light/dark)
+// the initial data-theme attribute is already set by an inline script in
+// <head> (before first paint, to avoid a flash of the wrong theme) - this
+// just handles flipping it and remembering the choice.
+const themeToggleBtns = document.querySelectorAll("[data-theme-toggle]");
+
+const setTheme = function (theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  try { localStorage.setItem("theme", theme); } catch (e) { /* private mode, etc. */ }
+};
+
+for (let i = 0; i < themeToggleBtns.length; i++) {
+  themeToggleBtns[i].addEventListener("click", function () {
+    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    setTheme(current === "light" ? "dark" : "light");
+  });
+}
+
+
+
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");

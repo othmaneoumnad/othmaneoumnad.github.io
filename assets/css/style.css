@@ -17,6 +17,8 @@
 
 :root {
 
+  color-scheme: dark;
+
   /**
    * colors
    */
@@ -69,6 +71,14 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  /* theme-dependent (redefined under [data-theme="light"] below) */
+  --navbar-bg: hsla(240, 1%, 17%, 0.75);
+  --hover-surface: hsl(240, 2%, 20%);
+  --zebra-stripe: hsla(0, 0%, 100%, 0.025);
+  --scrollbar-thumb: hsla(0, 0%, 100%, 0.1);
+  --scrollbar-thumb-hover: hsla(0, 0%, 100%, 0.15);
+  --scrollbar-inset: hsla(0, 0%, 100%, 0.11);
+
   /**
    * typography
    */
@@ -108,6 +118,77 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+
+}
+
+
+/**
+ * light theme
+ *
+ * same variable names, redefined - every component rule below reads
+ * these through var(), so nothing outside this block (and a small
+ * handful of spots that had hardcoded colors, called out where they
+ * occur) needs to know a light theme exists.
+ */
+
+:root[data-theme="light"] {
+
+  color-scheme: light;
+
+  /* gradient */
+
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(240, 5%, 93%) 3%,
+    hsl(240, 3%, 88%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(240, 3%, 90%, 0.4) 0%,
+    hsla(240, 3%, 90%, 0) 100%
+  ), hsl(0, 0%, 100%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(40, 95%, 60%) 0%,
+    hsla(36, 90%, 60%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg,
+    hsla(40, 95%, 55%, 0.35) 0%,
+    hsla(35, 90%, 55%, 0) 59.86%
+  ), hsl(0, 0%, 100%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(240, 2%, 84%) 0%,
+    hsla(240, 2%, 84%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(42, 95%, 50%),
+    hsl(35, 90%, 45%)
+  );
+
+  /* solid */
+
+  --jet: hsl(240, 3%, 84%);
+  --onyx: hsl(240, 5%, 92%);
+  --eerie-black-1: hsl(240, 5%, 97%);
+  --eerie-black-2: hsl(0, 0%, 100%);
+  --smoky-black: hsl(240, 5%, 96%);
+  --white-1: hsl(240, 3%, 12%);
+  --white-2: hsl(240, 3%, 12%);
+  --orange-yellow-crayola: hsl(40, 92%, 48%);
+  --vegas-gold: hsl(42, 55%, 38%);
+  --light-gray: hsl(240, 2%, 25%);
+  --light-gray-70: hsl(240, 1%, 46%);
+
+  /* theme-dependent */
+  --navbar-bg: hsla(0, 0%, 100%, 0.75);
+  --hover-surface: hsl(240, 2%, 90%);
+  --zebra-stripe: hsla(0, 0%, 0%, 0.03);
+  --scrollbar-thumb: hsla(0, 0%, 0%, 0.15);
+  --scrollbar-thumb-hover: hsla(0, 0%, 0%, 0.22);
+  --scrollbar-inset: hsla(0, 0%, 0%, 0.06);
 
 }
 
@@ -290,6 +371,26 @@ article.active {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+}
+
+/**
+ * theme-recolorable icons: these SVGs (the 4 "what I bring" icons and the
+ * 16 tech-stack logos) are loaded as <img>, so CSS can't reach into the
+ * file to recolor it directly - masking the element with the SVG's shape
+ * and painting it with a background-color (which *does* follow the theme
+ * variable) sidesteps that. The mask-image URL is set per instance via an
+ * inline style.
+ */
+
+.icon-mask {
+  display: block;
+  background-color: var(--orange-yellow-crayola);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 
@@ -482,7 +583,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -509,6 +610,33 @@ main {
 .navbar-link:focus { color: var(--light-gray-70); }
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
+
+/**
+ * theme toggle
+ */
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  margin: 0 4px;
+  border-radius: 50%;
+  color: var(--light-gray);
+  transition: color var(--transition-1), background var(--transition-1);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus { color: var(--orange-yellow-crayola); }
+
+.theme-toggle ion-icon { font-size: 18px; }
+
+.theme-icon-light { display: none; }
+
+:root[data-theme="light"] .theme-icon-dark { display: none; }
+
+:root[data-theme="light"] .theme-icon-light { display: block; }
 
 
 
@@ -565,7 +693,11 @@ main {
 
 .service-icon-box { margin-bottom: 10px; }
 
-.service-icon-box img { margin: auto; }
+.service-icon-box .icon-mask {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
 
 .service-content-box { text-align: center; }
 
@@ -630,7 +762,10 @@ main {
   box-shadow: var(--shadow-3);
 }
 
-.tech-stack-icon-box img { width: 55%; }
+.tech-stack-icon-box .icon-mask {
+  width: 55%;
+  height: 55%;
+}
 
 .tech-stack-name {
   color: var(--light-gray-70);
@@ -1046,7 +1181,7 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { --eerie-black-2: var(--hover-surface); }
 
 .project-list {
   display: grid;
@@ -1319,7 +1454,7 @@ main {
 
 .data-table tbody tr:last-child td { border-bottom: none; }
 
-.data-table tbody tr:nth-child(even) { background: hsla(0, 0%, 100%, 0.025); }
+.data-table tbody tr:nth-child(even) { background: var(--zebra-stripe); }
 
 /* dashboard screenshots */
 
@@ -2109,13 +2244,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
-    background: hsla(0, 0%, 100%, 0.1);
+    background: var(--scrollbar-thumb);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-                inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    box-shadow: inset 1px 1px 0 var(--scrollbar-inset),
+                inset -1px -1px 0 var(--scrollbar-inset);
   }
 
-  body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
+  body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
   body::-webkit-scrollbar-button { height: 60px; }
 

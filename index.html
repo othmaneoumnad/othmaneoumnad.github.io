@@ -2,6 +2,22 @@
 <html lang="en">
 
 <head>
+  <!--
+    - theme (light/dark) applied before first paint, to avoid a flash of
+    - the wrong theme on load
+  -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -175,6 +191,13 @@
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
 
+          <li class="navbar-item">
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
+              <ion-icon name="moon-outline" class="theme-icon-dark"></ion-icon>
+              <ion-icon name="sunny-outline" class="theme-icon-light"></ion-icon>
+            </button>
+          </li>
+
         </ul>
 
       </nav>
@@ -231,7 +254,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-analytics.svg" alt="analytics icon" width="40">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/icon-analytics.svg');mask-image:url('./assets/images/icon-analytics.svg');"></span>
               </div>
 
               <div class="service-content-box">
@@ -248,7 +271,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-research.svg" alt="research icon" width="40">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/icon-research.svg');mask-image:url('./assets/images/icon-research.svg');"></span>
               </div>
 
               <div class="service-content-box">
@@ -265,7 +288,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-data.svg" alt="data icon" width="40">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/icon-data.svg');mask-image:url('./assets/images/icon-data.svg');"></span>
               </div>
 
               <div class="service-content-box">
@@ -282,7 +305,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-strategy.svg" alt="strategy icon" width="40">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/icon-strategy.svg');mask-image:url('./assets/images/icon-strategy.svg');"></span>
               </div>
 
               <div class="service-content-box">
@@ -313,112 +336,112 @@
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/googleads.svg" alt="Google Ads logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/googleads.svg');mask-image:url('./assets/images/tech/googleads.svg');"></span>
               </div>
               <p class="tech-stack-name">Google Ads</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/github.svg" alt="GitHub logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/github.svg');mask-image:url('./assets/images/tech/github.svg');"></span>
               </div>
               <p class="tech-stack-name">GitHub</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/stata.svg" alt="Stata logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/stata.svg');mask-image:url('./assets/images/tech/stata.svg');"></span>
               </div>
               <p class="tech-stack-name">Stata</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/visualstudiocode.svg" alt="VS Code logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/visualstudiocode.svg');mask-image:url('./assets/images/tech/visualstudiocode.svg');"></span>
               </div>
               <p class="tech-stack-name">VS Code</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/dbeaver.svg" alt="DBeaver logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/dbeaver.svg');mask-image:url('./assets/images/tech/dbeaver.svg');"></span>
               </div>
               <p class="tech-stack-name">DBeaver</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/powerbi.svg" alt="Power BI logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/powerbi.svg');mask-image:url('./assets/images/tech/powerbi.svg');"></span>
               </div>
               <p class="tech-stack-name">Power BI</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/python.svg" alt="Python logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/python.svg');mask-image:url('./assets/images/tech/python.svg');"></span>
               </div>
               <p class="tech-stack-name">Python</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/sql.svg" alt="SQL logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/sql.svg');mask-image:url('./assets/images/tech/sql.svg');"></span>
               </div>
               <p class="tech-stack-name">SQL</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/googleanalytics.svg" alt="Google Analytics logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/googleanalytics.svg');mask-image:url('./assets/images/tech/googleanalytics.svg');"></span>
               </div>
               <p class="tech-stack-name">Google Analytics</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/googletagmanager.svg" alt="Google Tag Manager logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/googletagmanager.svg');mask-image:url('./assets/images/tech/googletagmanager.svg');"></span>
               </div>
               <p class="tech-stack-name">Tag Manager</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/microsoftexcel.svg" alt="Excel logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/microsoftexcel.svg');mask-image:url('./assets/images/tech/microsoftexcel.svg');"></span>
               </div>
               <p class="tech-stack-name">Excel</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/microsoftpowerpoint.svg" alt="PowerPoint logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/microsoftpowerpoint.svg');mask-image:url('./assets/images/tech/microsoftpowerpoint.svg');"></span>
               </div>
               <p class="tech-stack-name">PowerPoint</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/databricks.svg" alt="Databricks logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/databricks.svg');mask-image:url('./assets/images/tech/databricks.svg');"></span>
               </div>
               <p class="tech-stack-name">Databricks</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/claude.svg" alt="Claude logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/claude.svg');mask-image:url('./assets/images/tech/claude.svg');"></span>
               </div>
               <p class="tech-stack-name">Claude</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/rstudio.svg" alt="R Studio logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/rstudio.svg');mask-image:url('./assets/images/tech/rstudio.svg');"></span>
               </div>
               <p class="tech-stack-name">R Studio</p>
             </li>
 
             <li class="tech-stack-item">
               <div class="tech-stack-icon-box">
-                <img src="./assets/images/tech/abletonlive.svg" alt="Ableton logo" width="28">
+                <span class="icon-mask" aria-hidden="true" style="-webkit-mask-image:url('./assets/images/tech/abletonlive.svg');mask-image:url('./assets/images/tech/abletonlive.svg');"></span>
               </div>
               <p class="tech-stack-name">Ableton</p>
             </li>
