@@ -1236,6 +1236,19 @@ main {
   font-weight: var(--fw-500);
 }
 
+.project-text p a,
+.project-section p a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-1);
+}
+
+.project-text p a:hover,
+.project-text p a:focus,
+.project-section p a:hover,
+.project-section p a:focus { color: var(--vegas-gold); }
+
 /* "for the economically inclined" style callouts: a shaded, accent-bordered
    box so an optional/skippable aside reads as visually distinct from the
    main narrative, rather than just another section */
