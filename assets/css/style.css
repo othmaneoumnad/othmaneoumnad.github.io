@@ -735,6 +735,29 @@ main {
   line-height: 1.6;
 }
 
+/* Apple-style "Learn more ›" link under each card */
+
+.service-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  transition: color var(--transition-1);
+}
+
+.service-link span {
+  display: inline;
+  margin-left: 2px;
+}
+
+.service-link:hover,
+.service-link:focus {
+  color: var(--vegas-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 
 /**
  * #tech-stack

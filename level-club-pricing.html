@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+    - theme (light/dark) applied before first paint, to avoid a flash of
+    - the wrong theme on load
+  -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Strategy: Moving a Casablanca Billiard Club to Hourly Pricing - Othmane Oumnad</title>
+  <meta name="description" content="Replaced per-game pricing with an hourly rate that fit the club's positioning, launched with a targeted promotion: customer visits up about 50%.">
+
+  <!--
+    - link previews (LinkedIn, iMessage, Slack, email)
+  -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://othmaneoumnad.github.io/level-club-pricing.html">
+  <meta property="og:title" content="Pricing Strategy: Moving a Casablanca Billiard Club to Hourly Pricing">
+  <meta property="og:description" content="Replaced per-game pricing with an hourly rate that fit the club's positioning, launched with a targeted promotion: customer visits up about 50%.">
+  <meta property="og:image" content="https://othmaneoumnad.github.io/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--
+    - favicon
+  -->
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Othmane Oumnad" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Othmane Oumnad">Othmane Oumnad</h1>
+
+          <p class="title">Business Analyst</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <div class="contact-value">
+                <a href="mailto:othmane.oumnad@gmail.com" class="contact-link" title="othmane.oumnad@gmail.com">othmane.oumnad@gmail.com</a>
+
+                <button type="button" class="copy-btn" data-copy-value="othmane.oumnad@gmail.com" aria-label="Copy email address">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://github.com/othmaneoumnad" target="_blank" rel="noopener">
+
+              <div class="icon-box">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">GitHub</p>
+                <p class="contact-link">github.com/othmaneoumnad</p>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://www.linkedin.com/in/othmaneoumnad" target="_blank" rel="noopener">
+
+              <div class="icon-box">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">LinkedIn</p>
+                <p class="contact-link">linkedin.com/in/othmaneoumnad</p>
+              </div>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html#about" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#resume" class="navbar-link">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#portfolio" class="navbar-link active">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#contact" class="navbar-link">Contact</a>
+          </li>
+
+          <li class="navbar-item">
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
+              <ion-icon name="moon-outline" class="theme-icon-dark"></ion-icon>
+              <ion-icon name="sunny-outline" class="theme-icon-light"></ion-icon>
+              <span class="theme-toggle-thumb"></span>
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!--
+        - #PROJECT DETAIL: Pricing Strategy
+      -->
+
+      <article class="project-detail active">
+
+        <header class="project-header">
+
+          <a href="./index.html#portfolio" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            <span>Back to Portfolio</span>
+          </a>
+
+          <p class="project-tag">Strategy & Finance</p>
+
+          <h2 class="h2 article-title">Pricing Strategy: Moving a Casablanca Billiard Club to Hourly Pricing</h2>
+
+        </header>
+
+        <!--
+          - at a glance
+        -->
+
+        <section class="project-section project-glance content-card">
+
+          <h3 class="h3 project-section-title">At a glance</h3>
+
+          <ul class="project-glance-list">
+
+            <li class="project-glance-item">
+              <span class="glance-label">Business</span>
+              <span class="glance-value">Level Club, a two-floor billiard club and caf&eacute; in Casablanca, one of the first in Morocco to offer American pool tables</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Role</span>
+              <span class="glance-value">Marketing &amp; Growth Intern, Jun &ndash; Jul 2023</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Change</span>
+              <span class="glance-value">Replaced per-game pricing with the club's first hourly rate, launched with a &ldquo;buy 2 hours, get the 3rd free&rdquo; offer</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Measurement</span>
+              <span class="glance-value">Redemption-based tracking (customers showed the Instagram post or brought a flyer), compared against the club's usual occupancy and sales</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Results</span>
+              <span class="glance-value">Customer visits up about 50%; sales up about 30% during the promotion</span>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - the business
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">The business</h3>
+
+          <p>
+            Level Club is a large billiard club on two floors, with snooker, English pool, and American pool tables, plus
+            a caf&eacute; serving drinks, waffles, and cr&ecirc;pes. It was one of the first clubs in Morocco to offer
+            American pool.
+          </p>
+
+          <p>
+            It was also built to be a different kind of club. The typical Moroccan pool hall is small, offers only English
+            pool and snooker, and draws a mostly male crowd. Level Club set out to be a place where friends spend an
+            evening around pool and where players come to practice, not just to play strangers: more upscale, and
+            safer and more welcoming for women and groups. Prices were set slightly above nearby clubs to match that
+            positioning.
+          </p>
+
+        </section>
+
+        <!--
+          - why hourly pricing
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Why hourly pricing</h3>
+
+          <p>
+            Pool halls in Morocco typically charge per game, and the loser pays. That model suits head-to-head play
+            between strangers, not the experience Level Club was selling. An hourly rate charges for what the club
+            actually offers: time at a table.
+          </p>
+
+          <p>
+            It fit the club in several ways. Groups that take their time pay for the time they use, and slow games no
+            longer tie up tables without adding revenue. Practice becomes something the club can sell, since a player
+            training alone has no game to pay for. Longer stays also support the caf&eacute;. Because the change fit the
+            club's value proposition, it was an easy case to make to the owner.
+          </p>
+
+        </section>
+
+        <!--
+          - designing the launch offer
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Designing the launch offer</h3>
+
+          <p>
+            We launched the hourly rate with a promotion: buy 2 hours, get the 3rd free. Its main job was to bring
+            people in to try the new pricing; a second goal was to fill tables on the days and hours that the owner's
+            occupancy data showed were usually quiet.
+          </p>
+
+          <p>
+            I chose this over &ldquo;buy 1 hour, get 1 free&rdquo; on purpose, because people tend to overestimate how
+            long they'll play when they start a session. The offer looked generous, but anyone taking it paid for two
+            hours, and few used the full third. In pricing terms, it was a quantity discount: the free hour made the offer
+            attractive, and the two paid hours set the minimum spend.
+          </p>
+
+        </section>
+
+        <!--
+          - promotion and measurement
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Promotion and measurement</h3>
+
+          <p>
+            The offer ran on Instagram and on flyers. To redeem it, customers had to show the Instagram post or bring a
+            flyer, which tied each redemption to the channel that brought it in. To measure impact, I compared visits
+            and sales against the owner's averages for table occupancy by day and season, along with what I saw on the
+            floor during the internship.
+          </p>
+
+        </section>
+
+        <!--
+          - results
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Results</h3>
+
+          <p>
+            <strong>Customer visits up about 50%</strong> compared with the club's usual levels for the season.
+          </p>
+
+          <p>
+            <strong>Sales up about 30%</strong> while the promotion ran.
+          </p>
+
+          <p>
+            <strong>A longer run than planned.</strong> Designed as a short launch offer, the promotion ran for one to two
+            months.
+          </p>
+
+          <p>
+            <strong>Repeat visits.</strong> Groups rarely stayed the full three hours, but they came back.
+          </p>
+
+          <p>
+            <em>These are estimates from a two-month internship, compared against seasonal averages rather than a
+            controlled test.</em>
+          </p>
+
+        </section>
+
+        <!--
+          - what i took from it
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">What I took from it</h3>
+
+          <p>
+            The structure of an offer can matter more than the size of the discount. Designing it around how customers
+            plan their time, and building measurement into it from the start, is what made the change both effective
+            and measurable.
+          </p>
+
+        </section>
+
+        <a href="./index.html#portfolio" class="back-link back-link-bottom">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          <span>Back to Portfolio</span>
+        </a>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

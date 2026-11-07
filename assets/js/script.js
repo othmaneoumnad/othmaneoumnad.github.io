@@ -119,26 +119,8 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// phone number: built at runtime from an encoded value so it isn't
-// readable as plain text by crawlers scraping the static HTML, while still
-// being fully visible and clickable for real visitors with JS enabled
-const phoneLink = document.querySelector("[data-phone-link]");
-
-if (phoneLink) {
-  const digits = atob(phoneLink.dataset.phoneEncoded); // e.g. "19294290234"
-  const formatted = `+1 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
-
-  phoneLink.textContent = formatted;
-  phoneLink.href = `tel:+${digits}`;
-  phoneLink.setAttribute("aria-label", `Call ${formatted}`);
-  phoneLink.setAttribute("title", formatted);
-
-  const copyPhoneBtn = document.querySelector("[data-copy-phone]");
-  if (copyPhoneBtn) copyPhoneBtn.dataset.copyValue = formatted;
-}
-
-// copy-to-clipboard for contact info (email + phone)
-const copyButtons = document.querySelectorAll("[data-copy-value], [data-copy-phone]");
+// copy-to-clipboard for contact info
+const copyButtons = document.querySelectorAll("[data-copy-value]");
 
 for (let i = 0; i < copyButtons.length; i++) {
   copyButtons[i].addEventListener("click", function () {

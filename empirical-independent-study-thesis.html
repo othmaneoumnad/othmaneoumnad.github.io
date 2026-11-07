@@ -102,26 +102,6 @@
           </li>
 
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <div class="contact-value">
-                <a href="#" class="contact-link" data-phone-link data-phone-encoded="MTkyOTQyOTAyMzQ=" aria-label="Call phone number"></a>
-
-                <button type="button" class="copy-btn" data-copy-phone aria-label="Copy phone number">
-                  <ion-icon name="copy-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
             <a class="contact-item-link" href="https://github.com/othmaneoumnad" target="_blank" rel="noopener">
 
               <div class="icon-box">
@@ -242,7 +222,7 @@
 
             <li class="project-glance-item">
               <span class="glance-label">Method</span>
-              <span class="glance-value">A hand-collected 18-firm panel, an imputed outcome measure, and panel regressions (pooled and firm fixed-effects)</span>
+              <span class="glance-value">A hand-collected 18-firm panel, a model-based measure of each firm's brand-building share, and panel regressions (pooled and firm fixed-effects)</span>
             </li>
 
             <li class="project-glance-item">
@@ -314,12 +294,10 @@
           </p>
 
           <p>
-            Since no company reports its actual upper-funnel-versus-lower-funnel split, I couldn't just look this
-            number up either, I had to construct it. I used the theoretical model itself to build a stand-in: for
-            each firm-year, I took its advertising spend relative to its peers in the same year, then mapped that
-            through a calibrated logistic curve to produce a plausible upper-funnel share. It's an imputed measure,
-            not a directly reported one, and I'm upfront about that limitation below, but it's grounded in the same
-            theory the rest of the thesis builds on, not an arbitrary proxy.
+            Companies don't report how they split their budgets across the funnel, so I built that measure from the
+            theory: for each firm-year, I took its advertising spend relative to its peers in the same year and mapped
+            it through a calibrated logistic curve to estimate its upper-funnel share. That kept the empirical work
+            tied directly to the model it was testing.
           </p>
 
         </section>

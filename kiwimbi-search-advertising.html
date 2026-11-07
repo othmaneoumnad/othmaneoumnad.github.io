@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+    - theme (light/dark) applied before first paint, to avoid a flash of
+    - the wrong theme on load
+  -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonprofit Search Advertising: Building Kiwimbi's Google Ad Grant Program - Othmane Oumnad</title>
+  <meta name="description" content="Built a nonprofit's Google Ad Grant program from scratch: website traffic up 46% year over year and a 12.29% click-through rate.">
+
+  <!--
+    - link previews (LinkedIn, iMessage, Slack, email)
+  -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://othmaneoumnad.github.io/kiwimbi-search-advertising.html">
+  <meta property="og:title" content="Nonprofit Search Advertising: Building Kiwimbi's Google Ad Grant Program">
+  <meta property="og:description" content="Built a nonprofit's Google Ad Grant program from scratch: website traffic up 46% year over year and a 12.29% click-through rate.">
+  <meta property="og:image" content="https://othmaneoumnad.github.io/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--
+    - favicon
+  -->
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Othmane Oumnad" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Othmane Oumnad">Othmane Oumnad</h1>
+
+          <p class="title">Business Analyst</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <div class="contact-value">
+                <a href="mailto:othmane.oumnad@gmail.com" class="contact-link" title="othmane.oumnad@gmail.com">othmane.oumnad@gmail.com</a>
+
+                <button type="button" class="copy-btn" data-copy-value="othmane.oumnad@gmail.com" aria-label="Copy email address">
+                  <ion-icon name="copy-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://github.com/othmaneoumnad" target="_blank" rel="noopener">
+
+              <div class="icon-box">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">GitHub</p>
+                <p class="contact-link">github.com/othmaneoumnad</p>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="contact-item">
+            <a class="contact-item-link" href="https://www.linkedin.com/in/othmaneoumnad" target="_blank" rel="noopener">
+
+              <div class="icon-box">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">LinkedIn</p>
+                <p class="contact-link">linkedin.com/in/othmaneoumnad</p>
+              </div>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html#about" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#resume" class="navbar-link">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#portfolio" class="navbar-link active">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#contact" class="navbar-link">Contact</a>
+          </li>
+
+          <li class="navbar-item">
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
+              <ion-icon name="moon-outline" class="theme-icon-dark"></ion-icon>
+              <ion-icon name="sunny-outline" class="theme-icon-light"></ion-icon>
+              <span class="theme-toggle-thumb"></span>
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!--
+        - #PROJECT DETAIL: Nonprofit Search Advertising
+      -->
+
+      <article class="project-detail active">
+
+        <header class="project-header">
+
+          <a href="./index.html#portfolio" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            <span>Back to Portfolio</span>
+          </a>
+
+          <p class="project-tag">Data & Analytics</p>
+
+          <h2 class="h2 article-title">Nonprofit Search Advertising: Building Kiwimbi's Google Ad Grant Program</h2>
+
+        </header>
+
+        <!--
+          - at a glance
+        -->
+
+        <section class="project-section project-glance content-card">
+
+          <h3 class="h3 project-section-title">At a glance</h3>
+
+          <ul class="project-glance-list">
+
+            <li class="project-glance-item">
+              <span class="glance-label">Organization</span>
+              <span class="glance-value">Kiwimbi International, a U.S. nonprofit that partners with Kiwimbi Kenya to run free public libraries and education programs in western Kenya</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Role</span>
+              <span class="glance-value">Marketing Analyst Intern (remote), Feb 2024 &ndash; Jul 2025; built and managed the search advertising program</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Budget</span>
+              <span class="glance-value">Google Ad Grant, up to $10,000/month in search ads</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Goals</span>
+              <span class="glance-value">Awareness (including fundraising events in U.S. cities), volunteer recruitment, donations</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Tools</span>
+              <span class="glance-value">Google Ads, Google Analytics 4, Google Tag Manager</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Results</span>
+              <span class="glance-value">+46% website traffic year over year; click-through rate raised from a 9.19% campaign average to 12.29%, more than twice the grant's 5% minimum; the volunteer campaign was paused after a surge in applications</span>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - the starting point
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">The starting point</h3>
+
+          <p>
+            Kiwimbi had a Google Ad Grant but no one to run it. There were no campaigns, no conversion tracking, and no
+            data on who visited the website or what they did there. I taught myself Google Ads and built the program
+            from scratch.
+          </p>
+
+          <p>
+            The grant comes with constraints paid advertisers don't face. Accounts must keep a click-through rate of at
+            least 5% every month and must track conversions, and grant ads struggle to compete on popular, high-volume
+            searches. Results had to come from precision, not spend.
+          </p>
+
+        </section>
+
+        <!--
+          - building the campaigns
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Building the campaigns</h3>
+
+          <p>
+            I organized campaigns around the organization's three goals: awareness of its work and its fundraising
+            events in U.S. cities, volunteer recruitment, and donations. From there, the work was continuous refinement.
+          </p>
+
+          <p>
+            <strong>Keywords.</strong> Removed low performers and tested new and trending terms, focusing on specific
+            searches that grant ads could realistically win.
+          </p>
+
+          <p>
+            <strong>Ad copy.</strong> Rewrote and tested ads to better match what people were searching for.
+          </p>
+
+          <p>
+            <strong>The website.</strong> Worked with my supervisor and the IT lead to speed up page loads by optimizing
+            images, add search keywords to page content, and update parts of the site. Google factors landing-page
+            experience into ad quality, so the site work fed directly into campaign performance.
+          </p>
+
+        </section>
+
+        <!--
+          - measuring what visitors did
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Measuring what visitors did</h3>
+
+          <p>
+            Using Google Tag Manager, I set up tracking for 8+ key actions across the site, from clicks on the home page,
+            newsletter, and volunteer pages to completed donations, and connected it all to Google Analytics 4.
+            Donations were the hardest to track and took the most troubleshooting.
+          </p>
+
+          <p>
+            The tracking showed what brought people to Kiwimbi: learning about the work, volunteering, giving, or
+            attending an event. I built KPI dashboards that leadership used to follow traffic, engagement, and
+            conversions. The tracking also met the grant's conversion requirement.
+          </p>
+
+        </section>
+
+        <!--
+          - results
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">Results</h3>
+
+          <p>
+            <strong>+46% website traffic</strong> in the program's first year, compared with the year before.
+          </p>
+
+          <p>
+            <strong>12.29% click-through rate,</strong> up from a 9.19% campaign average after a round of changes
+            aimed at it, and more than twice the grant's 5% minimum.
+          </p>
+
+          <p>
+            <strong>Donations, sign-ups, and events.</strong> The ads drove donations and newsletter sign-ups, and brought
+            supporters to Kiwimbi's events in U.S. cities, including charity runs.
+          </p>
+
+          <p>
+            <strong>More volunteers than needed.</strong> Volunteer applications grew to the point that we paused the
+            volunteer campaign.
+          </p>
+
+        </section>
+
+        <!--
+          - what i took from it
+        -->
+
+        <section class="project-section">
+
+          <h3 class="h3 project-section-title">What I took from it</h3>
+
+          <p>
+            On a fixed budget with strict rules, the gains came from the details: tighter keywords, better ads, and a
+            faster site. Measuring actions rather than clicks is also what told us when the volunteer campaign had done
+            its job.
+          </p>
+
+        </section>
+
+        <a href="./index.html#portfolio" class="back-link back-link-bottom">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          <span>Back to Portfolio</span>
+        </a>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
