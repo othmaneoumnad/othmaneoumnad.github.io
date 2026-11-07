@@ -227,7 +227,12 @@
 
             <li class="project-glance-item">
               <span class="glance-label">Deliverable</span>
-              <span class="glance-value">a 4-page Power BI reporting suite built on a hand-built Bronze/Silver/Gold pipeline</span>
+              <span class="glance-value">A tested Bronze/Silver/Gold pipeline and an activation model, feeding a 4-page Power BI report</span>
+            </li>
+
+            <li class="project-glance-item">
+              <span class="glance-label">Code</span>
+              <span class="glance-value"><a style="display: inline;" href="https://github.com/othmaneoumnad/product-analytics-lakehouse" target="_blank" rel="noopener">github.com/othmaneoumnad/product-analytics-lakehouse</a></span>
             </li>
 
           </ul>
@@ -359,76 +364,85 @@
             report to load.
           </p>
 
+          <p>
+            Data quality got the same treatment throughout. Silver keeps every row but flags the ones that can't be
+            trusted, such as events with no ID or no account, and gold passes on only what can be counted and
+            attributed. Deal amounts arrive in five currencies, so silver converts them to euros before anything gets
+            added up. Twelve automated checks run after every build, covering unique keys, valid relationships, and
+            the activation logic.
+          </p>
+
         </section>
 
         <!--
-          - the dashboard
+          - what the data shows
+          - (dashboard screenshots hidden until the Power BI measures are corrected)
         -->
 
         <section class="project-section">
 
-          <h3 class="h3 project-section-title">The dashboard</h3>
+          <h3 class="h3 project-section-title">What the data shows</h3>
 
-          <div class="dashboard-block">
+          <p>
+            Of 120 accounts, 89 showed at least one activation signal in their first 14 days, but only 21 showed
+            both. That puts the activation rate at 17.5%.
+          </p>
 
-            <p>
-              The Executive Overview is the single-glance page: 120 total accounts, ~12,900 events, 6,784 unique
-              users, and 374 deals created in the current year, broken out by market. One pattern shows up
-              immediately and holds across every metric on the page: the Nordic market drives roughly half of
-              everything, half the events, half the unique users, about half the deals. Whatever growth or retention
-              work comes next, that's where the concentration is.
-            </p>
-
-            <figure class="project-screenshot">
-              <img src="./assets/images/portfolio/product-analytics-lakehouse/Executive_Overview.png" alt="Executive Overview dashboard page" loading="lazy">
-            </figure>
-
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Stage (first 14 days)</th>
+                  <th>Accounts</th>
+                  <th>Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Signed up</td>
+                  <td>120</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>Showed at least one signal</td>
+                  <td>89</td>
+                  <td>74%</td>
+                </tr>
+                <tr>
+                  <td>Used the product on a deal</td>
+                  <td>60</td>
+                  <td>50%</td>
+                </tr>
+                <tr>
+                  <td>Created a deal</td>
+                  <td>50</td>
+                  <td>42%</td>
+                </tr>
+                <tr>
+                  <td><strong>Activated (both signals)</strong></td>
+                  <td><strong>21</strong></td>
+                  <td><strong>17.5%</strong></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <div class="dashboard-block">
+          <p>
+            <strong>Most early engagement stalls halfway.</strong> 68 of the 89 engaged accounts either used the
+            product on a deal or created a deal, but not both. The problem isn't getting accounts in the door; it's
+            connecting product usage to real sales work, which points to onboarding.
+          </p>
 
-            <p>
-              Product Usage & Adoption answers the "are people actually using the features that matter" question. The
-              most common actions are logging activity, enabling automation, moving deals through stages, and
-              creating deals, each in the 2,500+ range, which means the core sales-workflow features are genuinely
-              getting used, not just login-and-leave behavior.
-            </p>
+          <p>
+            <strong>Activation is slow even when it happens.</strong> Activated accounts took about 10 days on average
+            to reach value, and 18 of 21 needed a week or more, so even the accounts that succeed use most of the
+            14-day window.
+          </p>
 
-            <figure class="project-screenshot">
-              <img src="./assets/images/portfolio/product-analytics-lakehouse/Product_Usage_and_Adoption.png" alt="Product Usage and Adoption dashboard page" loading="lazy">
-            </figure>
-
-          </div>
-
-          <div class="dashboard-block">
-
-            <p>
-              Activation & Time-to-Value is the direct answer to leadership's first concern. Under the two-signal
-              definition, 16% of accounts activated, with an average time-to-value of about 6 days for the ones that
-              did. That's a number worth acting on: most signups aren't reaching that bar, but the ones that do, do
-              it fast.
-            </p>
-
-            <figure class="project-screenshot">
-              <img src="./assets/images/portfolio/product-analytics-lakehouse/Activation___Time-to-Value.png" alt="Activation and Time-to-Value dashboard page" loading="lazy">
-            </figure>
-
-          </div>
-
-          <div class="dashboard-block">
-
-            <p>
-              Activation is a one-time signal, though, so the last page, Activation Funnel & Health Monitoring,
-              tracks what happens afterward: rolling 14- and 30-day activity windows per account, built to catch
-              accounts that activate and then go quiet. It's the page aimed squarely at the churn concern, ongoing
-              health, not a one-time checkbox.
-            </p>
-
-            <figure class="project-screenshot">
-              <img src="./assets/images/portfolio/product-analytics-lakehouse/_Activation_Funnel___Health_Monitoring.png" alt="Activation Funnel and Health Monitoring dashboard page" loading="lazy">
-            </figure>
-
-          </div>
+          <p>
+            <strong>The Nordic market is half the business.</strong> It accounts for half of all accounts, product
+            events, and deals, so growth and retention work has the most leverage there.
+          </p>
 
         </section>
 

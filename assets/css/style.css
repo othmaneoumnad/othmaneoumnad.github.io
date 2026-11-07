@@ -1401,6 +1401,13 @@ main {
   line-height: 1.6;
 }
 
+.glance-value a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+
 /* body copy (reuses the same treatment as About's paragraphs) */
 
 .project-text p,
